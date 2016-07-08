@@ -67,7 +67,11 @@ function server (options) {
     console.log(options);
 
     new WebpackServer(webpack(config(options))).listen(options.port, 'localhost', function (err) {
-      console.error('no server started');
+      if (err) {
+        console.error('no server started');
+      } else {
+        console.log('server started on ' + options.port);
+      }
     });
   }
 }
