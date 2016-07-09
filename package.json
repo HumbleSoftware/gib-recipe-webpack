@@ -4,7 +4,7 @@
   "description": "Gib recipe for webpack.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\""
   },
   "author": "Carl Sutherland <carl@humblesoftware.com>",
   "license": "ISC",
