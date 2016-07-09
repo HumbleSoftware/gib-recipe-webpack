@@ -20,9 +20,9 @@ function config (options) {
 
   // Default options:
   var options = options || {};
-  options.entry = {
+  options.entry = options.entry || {
     app: [options.src || './src/index.js']
-  } || options.entry;
+  };
   var loaders = [
     {
       test: /\.js$/,
@@ -43,7 +43,7 @@ function config (options) {
     output: {
       path: options.dest,
       publicPath: '/build/',
-      filename: 'bundle.js'
+      filename: '[name]-bundle.js'
     },
     plugins: [
       new WebpackLivereload()
