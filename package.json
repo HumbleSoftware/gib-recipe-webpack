@@ -1,6 +1,6 @@
 {
   "name": "gib-recipe-webpack",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Gib recipe for webpack.",
   "main": "index.js",
   "scripts": {
