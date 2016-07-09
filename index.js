@@ -23,6 +23,17 @@ function config (options) {
   options.entry = {
     app: [options.src || './src/index.js']
   } || options.entry;
+  var loaders = [
+    {
+      test: /\.js$/,
+      loader: 'babel',
+      exclude: /node_modules/,
+      query: {
+        cacheDirectory: true,
+        presets: ['es2015']
+      }
+    }
+  ].concat(options.loaders || []);
 
   // Webpack config:
   var config = {
@@ -38,17 +49,7 @@ function config (options) {
       new WebpackLivereload()
     ],
     module: {
-      loaders: [
-        {
-          test: /\.js$/,
-          loader: 'babel',
-          exclude: /node_modules/,
-          query: {
-            cacheDirectory: true,
-            presets: ['es2015']
-          }
-        }
-      ]
+      loaders: loaders
     }
   };
 
