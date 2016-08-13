@@ -1,3 +1,5 @@
+'use strict';
+
 // Modules:
 var path              = require('path');
 var webpack           = require('webpack');
